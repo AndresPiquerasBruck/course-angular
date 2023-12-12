@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ServizioProvaService } from "../../servizi/servizio-prova.service"
 import { ServizioAutodidactaService } from "../../servizi/servizio-autodidacta.service"
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   colore= '';
   oggi = Date.now();
   cuis = this.servizioAutodidacta.getCuis();
+  sottoscrizione: any
  
   constructor(private servizioProva: ServizioProvaService, private servizioAutodidacta: ServizioAutodidactaService) {
 
@@ -51,15 +53,22 @@ export class HomeComponent implements OnInit, AfterViewInit{
     console.log(value)
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     console.log('ngOnInit Appcomponent', this.servizioProva.getPersone())
     console.log('ngOnInit Appcomponent', this.servizioAutodidacta.getCuis())
     console.log(this.inputSaluti)
+    this.sottoscrizione = interval(1000).subscribe(numero => {
+      console.log(numero);
+    })
   }
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit')
     console.log(this.inputSaluti)
+  }
+
+  ngOnDestroy() {
+    this.sottoscrizione.unsubscribe();
   }
 
   onClickTutorialVT() {
@@ -69,6 +78,7 @@ export class HomeComponent implements OnInit, AfterViewInit{
   cambiaColoreEvidenziatore(colore:string) {
     this.colore= colore
   }
+
 
   /* PRACTICE CODE */
 

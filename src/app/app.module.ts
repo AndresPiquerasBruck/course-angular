@@ -17,6 +17,7 @@ import { ContattoComponent } from './componenti/contatto/contatto.component';
 import { HiglightDirective } from './direttive/higlight.directive';
 import { CuitattoComponent } from './componenti/cuitatto/cuitatto.component';
 import { CuitattiComponent } from './componenti/cuitatti/cuitatti.component';
+import { NotfoundComponent } from './componenti/notfound/notfound.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CuitattiComponent } from './componenti/cuitatti/cuitatti.component';
     ContattoComponent,
     HiglightDirective,
     CuitattoComponent,
-    CuitattiComponent
+    CuitattiComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
