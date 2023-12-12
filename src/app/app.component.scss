@@ -1,0 +1,51 @@
+/* .cerchio {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: aqua;
+  margin-right: 10px;
+  text-align: center;
+}
+
+li > p {
+  margin-bottom: 0;
+}
+
+.cerchio-online {
+  background-color: green;
+  color: white;
+}
+
+.cerchio-offline {
+  background-color: red;
+  color: orange;
+} */
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cui-img {
+  object-fit:cover;
+  margin: 0 4px 0 4px;
+  border-radius: 10px;
+}
+
+.ngstyle-p {
+  border: 1px solid white; 
+  border-radius: 5px;
+}
+
+.ngclass-p {
+  border-radius: 5px;
+  background-color: antiquewhite;
+  color: black;
+}
+
+.ngclass-p-alt {
+  border-radius: 5px;
+  color: antiquewhite;
+  background-color: black;
+}
