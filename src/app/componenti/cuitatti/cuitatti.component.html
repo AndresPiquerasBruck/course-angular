@@ -1,1 +1,11 @@
-<p>cuitatti works!</p>
+<h2 class="text-center" style="margin-top: 20px;">Cuitatti: Cui contact page</h2>
+
+<div class="d-flex flex-row justify-content-center">
+  <div style="height:579.97px; min-width: 371px;" class="container w-25 text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
+    <div class="mx-4 custom-cuitatti-item" *ngFor="let cui of cuitatti; index as i">
+      <a routerLink="/cuitatti/{{i}}">{{cui.nome}}</a>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
