@@ -37,7 +37,7 @@
         </li>
       </ul> -->
   
-  <!--     <ul>
+<!--       <ul>
         <li *ngFor="let persona of persone; index as i">
           <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchio-online' : 'cerchio-offline'">i</div>
             <p>{{persona.nome}} {{persona.cognome}}</p>
@@ -65,70 +65,12 @@
 
       <!-- PRACTICAR TODOS LOS CONCEPTOS. TUTORIAL 26/40 -->
   
-      <div class="text-bg-dark p-4 text-center border-dark-subtle">
+      <div class="text-bg-dark p-4 pb-3 text-center border-dark-subtle sticky-top border-bottom">
         <h1 style="font-size: 40px;">Angular Practice Page!</h1>
-        <p style="margin-top: 20px;">This page serves as a way to practice lessons 1-26 of the 40 lessons angular course.</p>
-        <div class="gap-2">
-          <a routerLink="/" class="mx-4">HOME</a> 
-          <a routerLink="contatti" class="mx-4">CONTATTI</a> 
-        </div>
+        <hr/>
+        <a class="mx-4 custom-navbar-item" routerLink="/">HOME</a> 
+        <a class="mx-4 custom-navbar-item" routerLink="contatti">CONTATTI</a> 
+        <a class="mx-4 custom-navbar-item" routerLink="cuitatti">CUITATTI</a>
       </div>
-
-      <!-- <router-outlet></router-outlet> -->
-    
-      <div class="d-flex flex-wrap justify-content-center">
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          String interpolation: There are {{totalClasses}} classes.
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <button class="btn btn-dark border-light" [disabled]="!lightButton">
-            Property binding: The js variable<br/> keeps this button disabled.
-          </button>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <button class="btn btn-dark border-light" (click)="buttonChange()">
-            Event binding: This button will make <br/>the previous one enabled or disabled.
-          </button>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <input class="input-normal border-dark-subtle" [(ngModel)]="inputText"/>
-          <p style="margin-top:4px; margin-bottom:0;"> {{ inputText }} </p>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <div *ngIf="lightButton; then textLightOn else textLightOff"></div>
-          <ng-template #textLightOn>As you can see, the text changes with the variable. Value of lightButton: {{lightButton}}</ng-template>
-          <ng-template #textLightOff>NGIF: Changes the text with the value of lightButton: {{lightButton}}</ng-template>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center d-flex flex-column">
-          <div class="d-flex flex-row">
-            <div *ngFor="let cuiImg of cuiImgs; index as i">
-              <img class="cui-img" style="width: 200px; height:200px;" src={{cuiImg}}/>
-            </div>
-          </div>
-          <p class="mt-3">NGFOR: These cui images are done using an NGFOR loop.</p>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <button class="btn btn-dark border-light mb-4" (click)="buttonNgstyle()">
-            NGSTYLE: This button will change the css.
-          </button>
-          <p class="p-2 ngstyle-p" [ngStyle]="{'border-color': borderColor == 'royalblue' ? 'royalblue' : 'aqua'}">Simplemente</p>
-        </div>
-    
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <button class="btn btn-dark border-light mb-4" (click)="buttonNgclass()">
-            NCLASS: This button will change the css.
-          </button>
-          <p class="p-2 ngstyle-p" [ngClass]="!classButton ? 'ngclass-p':'ngclass-p-alt'">Simplemente</p>
-        </div>
-
-        <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
-          <p appHiglight>Directives: Activan eventos</p>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
   </div>

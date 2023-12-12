@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ServizioProvaService } from "./servizi/servizio-prova.service"
+import { ServizioAutodidactaService } from "./servizi/servizio-autodidacta.service"
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,12 @@ export class AppComponent implements OnInit, AfterViewInit{
   color= 'green';
   colore= '';
   oggi = Date.now();
-
-  constructor(private servizioProva: ServizioProvaService) {
+  cuis = this.servizioAutodidacta.getCuis();
+ 
+  constructor(private servizioProva: ServizioProvaService, private servizioAutodidacta: ServizioAutodidactaService) {
 
   }
+  
 
   onInput(event: Event){
     this.title = (<HTMLInputElement>event.target).value
@@ -49,6 +52,7 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   ngOnInit(): void {
     console.log('ngOnInit Appcomponent', this.servizioProva.getPersone())
+    console.log('ngOnInit Appcomponent', this.servizioAutodidacta.getCuis())
     console.log(this.inputSaluti)
   }
 

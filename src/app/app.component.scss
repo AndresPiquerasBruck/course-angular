@@ -49,3 +49,23 @@ li {
   color: antiquewhite;
   background-color: black;
 }
+
+#directive-div {
+  color: white;
+  background-color: #212529;
+}
+
+.custom-navbar-item {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.custom-navbar-item:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #212529;
+  font-size: 15px;
+}
