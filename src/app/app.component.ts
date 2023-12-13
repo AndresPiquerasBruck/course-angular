@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { ServizioProvaService } from "./servizi/servizio-prova.service"
 import { ServizioAutodidactaService } from "./servizi/servizio-autodidacta.service"
 import { Observable, interval } from 'rxjs';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Observable, interval } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
+  homeform: FormGroup
 
   ngOnInit(): void {
 /*     interval(1000).subscribe(numero => {
@@ -24,5 +26,7 @@ export class AppComponent{
     }).subscribe((numero) => {
       console.log(numero);
     }); */
+
+    
   }
 }
