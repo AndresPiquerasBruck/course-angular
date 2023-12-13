@@ -2,6 +2,7 @@ import { Component,ElementRef,OnInit,ViewChild, } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ServizioProvaService } from '../../servizi/servizio-prova.service';
 import { ServizioAutodidactaService } from '../../servizi/servizio-autodidacta.service';
+import { FirebaseService } from 'src/app/servizi/firebase.service';
 
 
 @Component({
@@ -20,10 +21,12 @@ export class HomeComponent implements OnInit {
   cuis = this.servizioAutodidacta.getCuis();
   sottoscrizione: any;
   homeform: FormGroup;
+  persone: any;
 
   constructor(
     private servizioProva: ServizioProvaService,
-    private servizioAutodidacta: ServizioAutodidactaService
+    private servizioAutodidacta: ServizioAutodidactaService,
+    private firebase: FirebaseService,
   ) {}
 
   onInput(event: Event) {
@@ -79,6 +82,29 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     console.log(this.homeform);
+
+    this.firebase.insertPersona(
+      'https://corso-angular-29368-default-rtdb.europe-west1.firebasedatabase.app/persone.json', 
+      {name: this.homeform.value.name, email: this.homeform.value.email}  
+    ).subscribe(data => {
+      console.log(data)
+    });
+  }
+
+  onDeletePersona() {
+    this.firebase.deletePersona('https://corso-angular-29368-default-rtdb.europe-west1.firebasedatabase.app/persone', '-NlYpquP0-9-xz913hs8'
+    ).subscribe(data => {
+      console.log(data)
+    })
+  }
+
+  onPatchPersona() {
+    this.firebase.patchPersona('https://corso-angular-29368-default-rtdb.europe-west1.firebasedatabase.app/persone', 
+    '-NlYpquP0-9-xz913hs8', 
+    {email: 'perrotortuga@perdidolacabeza.com'}
+    ).subscribe(data => {
+      console.log(data)
+    })
   }
 
   /* PRACTICE CODE */

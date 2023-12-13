@@ -178,5 +178,8 @@
         <button mat-raised-button color="primary" type="submit" [disabled]="!homeform.valid">Send</button>
       </form>
     </div>
+
+    <button mat-raised-button (click)="onDeletePersona()" color="primary">Delete user</button>
+    <button mat-raised-button (click)="onPatchPersona()" color="primary">Change user</button>
   </div>
 </html>
