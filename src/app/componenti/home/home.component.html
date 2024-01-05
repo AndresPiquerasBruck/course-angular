@@ -1,57 +1,57 @@
-<html>  
+<html>
   <!--   <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
-  
+
     <mat-form-field class="example-full-width">
       <mat-label>Favorite food</mat-label>
       <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
     </mat-form-field>
     <p> {{ title }} </p>
-  
-    <p *ngIf="isVisible; then bloccoIf else bloccoElse"></p> 
+
+    <p *ngIf="isVisible; then bloccoIf else bloccoElse"></p>
     <ng-template #bloccoIf>
       <p> fumé fumaste fumò fumamos fumàsteis fumaron </p>
     </ng-template>
     <ng-template #bloccoElse>
       <p> fumaré, fumaràs, fumarà, fumaremos, fumarèis, fuman </p>
     </ng-template> -->
-  
+
   <!--   <ul>
       <li *ngFor="let persona of persone; index as i">
         <p *ngIf="i < 2" class="cerchio-verde"></p>
         <p> {{i}} {{persona.nome}} - {{persona.cognome}} </p>
       </li>
     </ul> -->
-  
+
   <!--   <div [ngSwitch]="numero">
       <p *ngSwitchCase="1">uno</p>
       <p *ngSwitchCase="2">due</p>
       <p *ngSwitchCase="3">tre</p>
       <p *ngSwitchDefault>default</p>
     </div> -->
-  
-  
+
+
   <!--     <ul>
         <li *ngFor="let persona of persone">
           <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'yellow' : 'blue'}"> </div>
             <p>{{persona.nome}} {{persona.cognome}}</p>
         </li>
       </ul> -->
-  
+
 <!--       <ul>
         <li *ngFor="let persona of persone; index as i">
           <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchio-online' : 'cerchio-offline'">i</div>
             <p>{{persona.nome}} {{persona.cognome}}</p>
         </li>
       </ul> -->
-  
+
   <!--     <app-prova [data]="persone"> </app-prova>
       <button (click)="onClickTutorial()">Cambiar texto un saludo</button> -->
-  
+
   <!--     <app-prova (mandaDatiEvento)="riceviDati($event)"></app-prova> -->
-  
+
   <!--   <input #inputSaluti value="ciao">
     <button (click)="onClickTutorialVT()"></button> -->
-  
+
   <!--   <h2>Guataheeeeeeeeeeeeeeeel</h2>
     <div>
       <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')">Rosso
@@ -60,13 +60,13 @@
     </div>
    -->
   <!--   <p [appHighlight]="colore" defaultColor="black">Soy un paupérrimo diablo escasìsimo de hipérboles</p> -->
-  
+
   <!-- <p>{{oggi.toString() | date}}</p> -->
 
       <!-- PRACTICAR TODOS LOS CONCEPTOS. TUTORIAL 26/40 -->
   <router-outlet></router-outlet>
 
-  <h2 class="text-center" style="margin-top: 20px;">This page serves as a way to practice lessons 1-27 of the 40 lessons angular course.</h2>
+  <h2 class="text-center" style="margin-top: 20px;">This page serves as a way to practice lessons 1-40* of the 40 lessons angular course.</h2>
 
   <div class="d-flex flex-wrap justify-content-center">
     <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center">
@@ -121,7 +121,7 @@
 
     <div id="directive-div" appHiglight class=" card m-3 p-3 shadow border-dark-subtle justify-content-center text-center">
       <p>Directives: Creates events that can be triggered<br/> doing certain actions. Try to click this div!</p>
-    </div>    
+    </div>
 
     <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center d-flex flex-column text-center">
       <ul style="padding-left:0">
@@ -177,9 +177,18 @@
         </mat-form-field>
         <button mat-raised-button color="primary" type="submit" [disabled]="!homeform.valid">Send</button>
       </form>
+
     </div>
 
-    <button mat-raised-button (click)="onDeletePersona()" color="primary">Delete user</button>
-    <button mat-raised-button (click)="onPatchPersona()" color="primary">Change user</button>
+    <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center d-flex flex-column text-center">
+      <p>Delete and Change data from the (Firebase 🚫🔥) database:</p>
+      <button mat-raised-button (click)="onDeletePersona()" color="primary" class="m-2">Delete user</button>
+      <button mat-raised-button (click)="onPatchPersona()" color="primary" class="m-2">Change user</button>
+    </div>
+
+    <div class="text-bg-dark card m-3 p-3 shadow border-dark-subtle justify-content-center d-flex flex-column text-center">
+      <p>*Lessons 36-40 have been reduced for using Firebase 🚫🔥.</p>
+    </div>
+
   </div>
 </html>

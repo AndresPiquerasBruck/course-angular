@@ -1,57 +1,57 @@
 <html>
   <!--   <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
-  
+
     <mat-form-field class="example-full-width">
       <mat-label>Favorite food</mat-label>
       <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
     </mat-form-field>
     <p> {{ title }} </p>
-  
-    <p *ngIf="isVisible; then bloccoIf else bloccoElse"></p> 
+
+    <p *ngIf="isVisible; then bloccoIf else bloccoElse"></p>
     <ng-template #bloccoIf>
       <p> fumé fumaste fumò fumamos fumàsteis fumaron </p>
     </ng-template>
     <ng-template #bloccoElse>
       <p> fumaré, fumaràs, fumarà, fumaremos, fumarèis, fuman </p>
     </ng-template> -->
-  
+
   <!--   <ul>
       <li *ngFor="let persona of persone; index as i">
         <p *ngIf="i < 2" class="cerchio-verde"></p>
         <p> {{i}} {{persona.nome}} - {{persona.cognome}} </p>
       </li>
     </ul> -->
-  
+
   <!--   <div [ngSwitch]="numero">
       <p *ngSwitchCase="1">uno</p>
       <p *ngSwitchCase="2">due</p>
       <p *ngSwitchCase="3">tre</p>
       <p *ngSwitchDefault>default</p>
     </div> -->
-  
-  
+
+
   <!--     <ul>
         <li *ngFor="let persona of persone">
           <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'yellow' : 'blue'}"> </div>
             <p>{{persona.nome}} {{persona.cognome}}</p>
         </li>
       </ul> -->
-  
+
 <!--       <ul>
         <li *ngFor="let persona of persone; index as i">
           <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchio-online' : 'cerchio-offline'">i</div>
             <p>{{persona.nome}} {{persona.cognome}}</p>
         </li>
       </ul> -->
-  
+
   <!--     <app-prova [data]="persone"> </app-prova>
       <button (click)="onClickTutorial()">Cambiar texto un saludo</button> -->
-  
+
   <!--     <app-prova (mandaDatiEvento)="riceviDati($event)"></app-prova> -->
-  
+
   <!--   <input #inputSaluti value="ciao">
     <button (click)="onClickTutorialVT()"></button> -->
-  
+
   <!--   <h2>Guataheeeeeeeeeeeeeeeel</h2>
     <div>
       <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')">Rosso
@@ -60,17 +60,18 @@
     </div>
   -->
   <!--   <p [appHighlight]="colore" defaultColor="black">Soy un paupérrimo diablo escasìsimo de hipérboles</p> -->
-  
+
   <!-- <p>{{oggi.toString() | date}}</p> -->
 
       <!-- PRACTICAR TODOS LOS CONCEPTOS. TUTORIAL 26/40 -->
-  
+
   <div class="text-bg-dark p-4 pb-3 text-center border-dark-subtle sticky-top border-bottom">
     <h1 style="font-size: 40px;">Angular Practice Page!</h1>
     <hr/>
-    <a class="mx-4 custom-navbar-item" routerLink="/">HOME</a> 
-    <a class="mx-4 custom-navbar-item" routerLink="contatti">CONTATTI</a> 
+    <a class="mx-4 custom-navbar-item" routerLink="/">HOME</a>
+    <a class="mx-4 custom-navbar-item" routerLink="contatti">CONTATTI</a>
     <a class="mx-4 custom-navbar-item" routerLink="cuitatti">CUITATTI</a>
+    <a class="mx-4 custom-navbar-item" routerLink="signup">SIGNUP</a>
   </div>
 
   <router-outlet></router-outlet>
